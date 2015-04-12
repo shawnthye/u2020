@@ -68,13 +68,10 @@ Libraries
  * Retrofit - http://square.github.io/retrofit
  * Picasso - http://square.github.io/picasso
  * OkHttp - http://square.github.io/okhttp
- * RxJava - http://github.com/Netflix/RxJava
+ * RxJava - https://github.com/ReactiveX/RxJava
  * Timber - http://github.com/JakeWharton/timber
  * Madge - http://github.com/JakeWharton/madge
  * Scalpel - http://github.com/JakeWharton/scalpel
- * Hugo - https://github.com/JakeWharton/hugo
- * StaggeredGrid - https://github.com/etsy/AndroidStaggeredGrid
- * SDK Manager Plugin - https://github.com/JakeWharton/sdk-manager-plugin
 
 
 
@@ -83,10 +80,7 @@ To Do
 
  * Something with animations to showcase animation control.
  * Network errors probably crash the app.
- * Add another part of the app other than 'gallery' so we can demo child graphs.
- * Pressed state no longer works thanks to Etsy.
- * Toss column count into dimen and scale appropriately.
- * Controls to change which gallery we're looking at?
+ * Add another part of the app other than 'trending' so we can demo child graphs.
 
 
 
