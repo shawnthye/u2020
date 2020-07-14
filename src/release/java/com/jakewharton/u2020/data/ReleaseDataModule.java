@@ -29,16 +29,4 @@ public final class ReleaseDataModule {
     return DataModule.createOkHttpClient(app);
   }
 
-  @Provides @Singleton Picasso providePicasso(
-      Application app, OkHttpClient client) {
-    return new Picasso.Builder(app)
-        .downloader(new OkHttpDownloader(client))
-        .listener(new Picasso.Listener() {
-          @Override public void onImageLoadFailed(Picasso picasso, Uri uri, Exception e) {
-            Timber.e(e, "Failed to load image: %s", uri);
-          }
-        })
-        .build();
-  }
-
 }

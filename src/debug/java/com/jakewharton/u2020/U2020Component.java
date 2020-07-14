@@ -4,23 +4,31 @@ import com.jakewharton.u2020.data.DebugDataModule;
 import com.jakewharton.u2020.ui.DebugUiModule;
 
 import dagger.Component;
+
 import javax.inject.Singleton;
+
+// Definition of the Application graph
+//@Component
+//public interface ApplicationComponent {
+//}
 
 /**
  * The core debug component for u2020 applications
  */
 @Singleton
-@Component(modules = { U2020AppModule.class, DebugUiModule.class, DebugDataModule.class })
+@Component(modules = {U2020AppModule.class, DebugUiModule.class, DebugDataModule.class})
 public interface U2020Component extends U2020Graph {
-  /**
-   * An initializer that creates the graph from an application. 
-   */
-  final static class Initializer {
-    static U2020Graph init(U2020App app) {
-      return Dagger_U2020Component.builder()
-          .u2020AppModule(new U2020AppModule(app))
-          .build();
+    /**
+     * An initializer that creates the graph from an application.
+     */
+    final static class Initializer {
+        static U2020Graph init(U2020App app) {
+            return DaggerU2020Component.builder()
+                    .u2020AppModule(new U2020AppModule(app))
+                    .build();
+        }
+
+        private Initializer() {
+        } // No instances.
     }
-    private Initializer() {} // No instances.
-  }
 }

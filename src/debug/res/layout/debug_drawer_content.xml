@@ -91,7 +91,7 @@
         android:layout_marginLeft="4dp"
         android:src="@drawable/debug_drawer_icon_edit"
         android:background="?android:attr/actionBarItemBackground"
-        android:visibility="gone"
+        android:visibility="visible"
         />
   </LinearLayout>
 
